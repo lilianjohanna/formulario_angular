@@ -5,7 +5,7 @@ import { DireccionUsuarioComponent } from './direccion-usuario/direccion-usuario
 import { TelefonoUsuarioComponent } from './telefono-usuario/telefono-usuario.component';
 import { CorreoUsuarioComponent } from './correo-usuario/correo-usuario.component';
 import { EnviarComponent } from './enviar/enviar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     NgModule,
-    FormsModule
+    FormsModule,
+    NgForm
   ]
 })
 export class AppModule { }
