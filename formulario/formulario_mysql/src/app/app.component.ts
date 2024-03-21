@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-component',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './nombre-usuario/nombre-usuario.component.html',
-  styleUrl: './nombre-usuario/nombre-usuario.component.css'
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'formulario_mysql';
