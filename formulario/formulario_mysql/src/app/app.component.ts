@@ -15,7 +15,7 @@ import { CorreoUsuarioComponent } from './correo-usuario/correo-usuario.componen
   <app-telefono-usuario></app-telefono-usuario>
   <app-correo-usuario></app-correo-usuario>
   </form>`,*/
-  template: './app.component.html',
+  //template: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
