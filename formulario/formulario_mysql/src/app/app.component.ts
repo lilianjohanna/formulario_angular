@@ -16,5 +16,9 @@ export class AppComponent implements OnInit {
   constructor(private NombreUsuarioComponent: NombreUsuarioComponent, private DireccionUsuarioComponent: DireccionUsuarioComponent, private TelefonoUsuarioComponent: TelefonoUsuarioComponent, private CorreoUsuarioComponent: CorreoUsuarioComponent) { }  
   ngOnInit() {
     // Aquí puedes utilizar el componente de ejemplo
+    NombreUsuarioComponent;
+    DireccionUsuarioComponent;
+    TelefonoUsuarioComponent;
+    CorreoUsuarioComponent;
   }
 }
