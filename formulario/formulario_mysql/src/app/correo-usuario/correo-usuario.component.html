@@ -1,5 +1,5 @@
 <p>correo-usuario works!</p>
 <label>Correo: </label><input type="email" name="CorreoUsuarioComponent" [(ngModel)]="formData.CorreoUsuarioComponent" required />
-<div *ngIf="form.controls.CorreoUsuarioComponent.invalid && (form.controls.CorreoUsuarioComponent.dirty || form.controls.CorreoUsuarioComponent.touched)">
-    <div *ngIf="form.controls.CorreoUsuarioComponent.errors.required">El nombre es obligatorio.</div>
+<div @If="form.controls.CorreoUsuarioComponent.invalid && (form.controls.CorreoUsuarioComponent.dirty || form.controls.CorreoUsuarioComponent.touched)">
+    <div @If="form.controls.CorreoUsuarioComponent.errors.required">El nombre es obligatorio.</div>
   </div>
