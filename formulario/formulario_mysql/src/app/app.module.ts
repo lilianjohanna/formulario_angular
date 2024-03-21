@@ -10,7 +10,8 @@ import { EnviarComponent } from './enviar/enviar.component';
 @NgModule({
   declarations: [NombreUsuarioComponent,DireccionUsuarioComponent,TelefonoUsuarioComponent,CorreoUsuarioComponent,EnviarComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    NgModule
   ]
 })
 export class AppModule { }
