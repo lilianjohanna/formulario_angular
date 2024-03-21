@@ -11,7 +11,8 @@ import { CorreoUsuarioComponent } from './correo-usuario/correo-usuario.componen
     NombreUsuarioComponent,
     DireccionUsuarioComponent,
     TelefonoUsuarioComponent,
-    CorreoUsuarioComponent
+    CorreoUsuarioComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule
