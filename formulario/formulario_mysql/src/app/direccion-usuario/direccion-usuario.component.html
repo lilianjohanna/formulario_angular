@@ -1,2 +1,5 @@
 <p>direccion-usuario works!</p>
-<label>Dirección: </label><input type="text" />
+<label>Dirección: </label><input type="text" name="DireccionUsuarioComponent" [(ngModel)]="formData.DireccionUsuarioComponent" required />
+<div *ngIf="form.controls.DireccionUsuarioComponent.invalid && (form.controls.DireccionUsuarioComponent.dirty || form.controls.DireccionUsuarioComponent.touched)">
+    <div *ngIf="form.controls.DireccionUsuarioComponent.errors.required">El nombre es obligatorio.</div>
+  </div>
