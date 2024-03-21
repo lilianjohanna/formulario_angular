@@ -5,7 +5,7 @@ import { DireccionUsuarioComponent } from './direccion-usuario/direccion-usuario
 import { TelefonoUsuarioComponent } from './telefono-usuario/telefono-usuario.component';
 import { CorreoUsuarioComponent } from './correo-usuario/correo-usuario.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: './nombre-usuario', component: NombreUsuarioComponent },
   { path: './direccion-usuario', component: DireccionUsuarioComponent },
   { path: './telefono-usuario', component: TelefonoUsuarioComponent },
