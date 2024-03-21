@@ -8,7 +8,6 @@ import { CorreoUsuarioComponent } from './correo-usuario/correo-usuario.componen
 
 @NgModule({
   declarations: [
-    AppComponent,
     NombreUsuarioComponent,
     DireccionUsuarioComponent,
     TelefonoUsuarioComponent,
