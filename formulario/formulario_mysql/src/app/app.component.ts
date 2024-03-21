@@ -9,13 +9,7 @@ import { CorreoUsuarioComponent } from './correo-usuario/correo-usuario.componen
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,NombreUsuarioComponent,DireccionUsuarioComponent,TelefonoUsuarioComponent,CorreoUsuarioComponent],
-  /*template: `<form>
-  <app-nombre-usuario></app-nombre-usuario>
-  <app-direccion-usuario></app-direccion-usuario>
-  <app-telefono-usuario></app-telefono-usuario>
-  <app-correo-usuario></app-correo-usuario>
-  </form>`,*/
-  //template: './app.component.html',
+  templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
