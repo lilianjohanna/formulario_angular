@@ -6,11 +6,12 @@ import { TelefonoUsuarioComponent } from './telefono-usuario/telefono-usuario.co
 import { CorreoUsuarioComponent } from './correo-usuario/correo-usuario.component';
 import { EnviarComponent } from './enviar/enviar.component';
 import { NgIf } from '@angular/common';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NombreUsuarioComponent,DireccionUsuarioComponent,TelefonoUsuarioComponent,CorreoUsuarioComponent,EnviarComponent,NgIf,NgModule],
+  imports: [RouterOutlet,NombreUsuarioComponent,DireccionUsuarioComponent,TelefonoUsuarioComponent,CorreoUsuarioComponent,EnviarComponent,NgIf,NgModel],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
