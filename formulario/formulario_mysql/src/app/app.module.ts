@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [NgIf],
+  declarations: [],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    NgModule,
+    NgIf,
+    FormGroup
   ]
 })
 export class AppModule { }
