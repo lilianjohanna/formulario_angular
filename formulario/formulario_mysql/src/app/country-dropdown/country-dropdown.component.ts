@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-country-dropdown',
-  standalone: true,
-  imports: [],
   templateUrl: './country-dropdown.component.html',
-  styleUrl: './country-dropdown.component.css'
+  styleUrls: ['./country-dropdown.component.css']
 })
 export class CountryDropdownComponent {
-
+  @Input()
+  parentForm!: FormGroup;
 }
