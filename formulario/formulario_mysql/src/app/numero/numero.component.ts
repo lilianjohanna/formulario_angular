@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Component, NgModule } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-numero',
   standalone: true,
-  imports: [],
+  imports: [NgModule,NgIf,FormGroup],
   templateUrl: './numero.component.html',
   styleUrl: './numero.component.css'
 })
