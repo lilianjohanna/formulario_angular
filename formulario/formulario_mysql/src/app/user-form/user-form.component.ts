@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./user-form.component.css']
 })
 export class UserFormComponent implements OnInit {
-  userForm!: FormGroup;
+  userForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) { }
 
