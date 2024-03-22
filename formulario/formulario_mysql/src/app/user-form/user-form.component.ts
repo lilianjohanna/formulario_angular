@@ -1,12 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-user-form',
-  standalone: true,
-  imports: [],
   templateUrl: './user-form.component.html',
-  styleUrl: './user-form.component.css'
+  styleUrls: ['./user-form.component.css']
 })
-export class UserFormComponent {
+export class UserFormComponent implements OnInit {
+  userForm!: FormGroup;
 
+  constructor(private formBuilder: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.userForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      country: ['', Validators.required]
+    });
+  }
+
+  onSubmit() {
+    if (this.userForm.valid) {
+      console.log(this.userForm.value);
+      // Aquí puedes enviar los datos del formulario a través de un servicio HTTP, etc.
+    }
+  }
 }
