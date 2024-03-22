@@ -5,13 +5,12 @@ import { DireccionUsuarioComponent } from './direccion-usuario/direccion-usuario
 import { TelefonoUsuarioComponent } from './telefono-usuario/telefono-usuario.component';
 import { CorreoUsuarioComponent } from './correo-usuario/correo-usuario.component';
 import { EnviarComponent } from './enviar/enviar.component';
-import { NgIf } from '@angular/common';
-import { NgModel } from '@angular/forms';
+import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NombreUsuarioComponent,DireccionUsuarioComponent,TelefonoUsuarioComponent,CorreoUsuarioComponent,EnviarComponent,NgIf],
+  imports: [RouterOutlet,NombreUsuarioComponent,DireccionUsuarioComponent,TelefonoUsuarioComponent,CorreoUsuarioComponent,EnviarComponent,NgIf,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
