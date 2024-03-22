@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UserFormComponent } from './user-form/user-form.component';
@@ -18,6 +18,6 @@ import { CountryDropdownComponent } from './country-dropdown/country-dropdown.co
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent,UserFormComponent,CountryDropdownComponent]
+  bootstrap: [AppComponent,UserFormComponent,CountryDropdownComponent,FormGroup]
 })
 export class AppModule { }
