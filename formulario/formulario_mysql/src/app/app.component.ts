@@ -1,13 +1,36 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+interface User {
+  name: string;
+  country: string;
+}
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
+  selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'formulario_mysql';
+export class AppComponent implements OnInit {
+
+  form!: FormGroup;
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit() {
+    this.form = this.fb.group({
+      name: ['', Validators.required],
+      country: ['', Validators.required]
+    });
+  }
+
+  onSubmit() {
+    if (this.form.valid) {
+      // Enviar el formulario
+      console.log(this.form.value);
+    } else {
+      // Mostrar mensaje de error
+      console.log('Formulario inválido');
+    }
+  }
 }
