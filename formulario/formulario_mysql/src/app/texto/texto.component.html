@@ -1,5 +1,5 @@
 <p>texto works!</p>
 <label>Nombre: </label><input type="text" name="texto" required />
-<div *ngIf="formulario.controls['texto'].errors?.required" class="alert alert-danger">
+<div @If="formulario.controls['texto'].errors?.required" class="alert alert-danger">
     El nombre es obligatorio
   </div>
