@@ -3,12 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { TextoComponent } from './texto/texto.component';
 import { NumeroComponent } from './numero/numero.component';
 import { BotonComponent } from './boton/boton.component';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,TextoComponent,NumeroComponent,BotonComponent],
+  imports: [RouterOutlet,TextoComponent,NumeroComponent,BotonComponent,FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
