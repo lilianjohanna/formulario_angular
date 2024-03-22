@@ -1,5 +1,5 @@
 <p>nombre-usuario works!</p>
-<label>Nombre usuario: </label><input type="text" name="NombreUsuarioComponent" [(ngModel)]="formData.NombreUsuarioComponent" required/>
+<label>Nombre usuario: </label><input type="text" name="NombreUsuarioComponent" (ngModel)="formData.NombreUsuarioComponent" required/>
 <div @If="form.controls.NombreUsuarioComponent.invalid && (form.controls.NombreUsuarioComponent.dirty || form.controls.NombreUsuarioComponent.touched)">
     <div @If="form.controls.NombreUsuarioComponent.errors.required">El nombre es obligatorio.</div>
   </div>
