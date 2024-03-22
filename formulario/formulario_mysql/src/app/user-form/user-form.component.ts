@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Form, FormBuilder, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-user-form',
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./user-form.component.css']
 })
 export class UserFormComponent implements OnInit {
-  userForm!: FormGroup;
+  userForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) { }
 
