@@ -6,7 +6,7 @@ import { CountryDropdownComponent } from './country-dropdown/country-dropdown.co
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,UserFormComponent,CountryDropdownComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
