@@ -18,6 +18,6 @@ import { CountryDropdownComponent } from './country-dropdown/country-dropdown.co
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,UserFormComponent,CountryDropdownComponent]
 })
 export class AppModule { }
