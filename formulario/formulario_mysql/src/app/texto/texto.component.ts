@@ -5,7 +5,7 @@ import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-texto',
   standalone: true,
-  imports: [NgIf,FormGroup],
+  imports: [NgIf],
   templateUrl: './texto.component.html',
   styleUrl: './texto.component.css'
 })

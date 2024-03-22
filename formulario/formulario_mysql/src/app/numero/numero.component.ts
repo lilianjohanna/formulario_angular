@@ -5,7 +5,7 @@ import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-numero',
   standalone: true,
-  imports: [NgIf,FormGroup],
+  imports: [NgIf],
   templateUrl: './numero.component.html',
   styleUrl: './numero.component.css'
 })
