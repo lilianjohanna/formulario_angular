@@ -1,11 +1,10 @@
 import { NgIf } from '@angular/common';
-import { Component, NgModule } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-texto',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, Component],
   templateUrl: './texto.component.html',
   styleUrl: './texto.component.css'
 })
