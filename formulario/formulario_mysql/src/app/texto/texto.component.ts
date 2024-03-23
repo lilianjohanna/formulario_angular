@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-texto',
   standalone: true,
-  imports: [NgIf, Component],
+  imports: [NgIf],
   templateUrl: './texto.component.html',
   styleUrl: './texto.component.css'
 })

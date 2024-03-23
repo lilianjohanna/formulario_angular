@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-numero',
   standalone: true,
-  imports: [NgIf, Component],
+  imports: [NgIf],
   templateUrl: './numero.component.html',
   styleUrl: './numero.component.css'
 })
