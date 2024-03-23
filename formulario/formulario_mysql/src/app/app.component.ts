@@ -14,7 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit{
-  formulario: FormGroup | any;
+  formulario!: FormGroup;
   ngOnInit(): void {
     this.formulario = new FormGroup({
       TextoComponent: new FormControl('', [Validators.required]),
