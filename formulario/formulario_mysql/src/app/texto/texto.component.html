@@ -1,2 +1,5 @@
 <p>texto works!</p>
-<label>Nombre: </label><input type="text" name="texto" ngRequired />
+<label>Nombre: </label><input type="text" name="texto" [(ngModel)]="texto" />
+<div *ngIf="texto===''">
+    El campo nombre es obligatorio
+  </div>
