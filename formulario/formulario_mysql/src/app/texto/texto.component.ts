@@ -10,5 +10,5 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './texto.component.css'
 })
 export class TextoComponent {
-
+  formulario: any;
 }

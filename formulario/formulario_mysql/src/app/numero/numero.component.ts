@@ -10,5 +10,5 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './numero.component.css'
 })
 export class NumeroComponent {
-
+  formulario: any;
 }
