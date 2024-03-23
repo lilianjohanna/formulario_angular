@@ -11,5 +11,5 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class NumeroComponent {
   formulario!: FormGroup;
-  numero: any;
+  NumeroComponent: any;
 }
