@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-texto',
@@ -10,5 +10,5 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './texto.component.css'
 })
 export class TextoComponent {
-  formulario: any;
+  formulario!: FormGroup;
 }

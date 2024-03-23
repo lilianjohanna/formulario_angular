@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-numero',
@@ -10,5 +10,5 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './numero.component.css'
 })
 export class NumeroComponent {
-  formulario: any;
+  formulario!: FormGroup;
 }
