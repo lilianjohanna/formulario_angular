@@ -1,5 +1,5 @@
 <p>texto works!</p>
 <label>Nombre: </label><input type="text" formControlName="texto" required/>
-<div *ngIf="formulario.get('texto!').invalid">
+<div *ngIf="formulario.get('texto').invalid">
     El campo nombre es obligatorio
   </div>
