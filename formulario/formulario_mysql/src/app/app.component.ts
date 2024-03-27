@@ -15,8 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class AppComponent implements OnInit{
   formulario!: FormGroup;
-  texto: undefined;
-  numero: undefined;
+  texto!: undefined;
+  numero!: undefined;
   constructor()
   {
     this.formulario = new FormGroup({
