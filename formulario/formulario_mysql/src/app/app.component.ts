@@ -15,11 +15,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class AppComponent implements OnInit{
   formulario!: FormGroup;
+  texto: undefined;
+  numero: undefined;
   constructor()
   {
     this.formulario = new FormGroup({
-      texto: new FormControl('texto', [Validators.required, Validators.nullValidator]),
-      numero: new FormControl(0, [Validators.required, Validators.minLength(8), Validators.nullValidator]),
+      texto: new FormControl('', [Validators.required, Validators.nullValidator]),
+      numero: new FormControl('', [Validators.required, Validators.minLength(8), Validators.nullValidator]),
     });
   }
   ngOnInit(): void {    
