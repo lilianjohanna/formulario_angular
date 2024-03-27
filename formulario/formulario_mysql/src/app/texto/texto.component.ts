@@ -11,5 +11,5 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class TextoComponent {
   formulario!: FormGroup;
-  TextoComponent: any;
+  texto: any;
 }
