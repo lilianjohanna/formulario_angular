@@ -1,5 +1,5 @@
 <p>numero works!</p>
 <label>Número: </label><input type="number" formControlName="numero" required/>
-<div *ngIf="formulario.get('numero').invalid">
+<div *ngIf="numero==null">
     El campo nombre es obligatorio
   </div>
