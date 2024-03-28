@@ -15,8 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class AppComponent implements OnInit{
   formulario!: FormGroup;
-  texto: any;
-  numero: any;
+  texto!: string;
+  numero!: number;
   ngOnInit(): void {
     this.formulario = new FormGroup({
       texto: new FormControl('',Validators.required),
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
     });    
   }
   enviarFormulario(): void {
-    if(this.texto!='' || this.numero!='' || this.numero==0) {
+    if(this.texto!='' || this.numero==0) {
       alert(this.formulario.valid);
       //console.log('Formulario enviado:', this.formulario.value);
     } else {
