@@ -26,9 +26,11 @@ export class AppComponent implements OnInit{
   }
   enviarFormulario(): void {
     if (this.formulario.valid) {
-      console.log('Formulario enviado:', this.formulario.value);
+      alert('Formulario enviado');
+      //console.log('Formulario enviado:', this.formulario.value);
     } else {
-      console.log('Formulario no válido');
+      alert('Formulario no válido');
+      //console.log('Formulario no válido');
     }
   }
   title = 'formulario_mysql';
