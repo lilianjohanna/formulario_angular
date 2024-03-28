@@ -19,12 +19,12 @@ export class AppComponent implements OnInit{
   numero!: number;
   ngOnInit(): void {
     this.formulario = new FormGroup({
-      texto: new FormControl('',Validators.required),
-      numero: new FormControl('',Validators.required),
+      texto: new FormControl('',[Validators.required]),
+      numero: new FormControl('',[Validators.required]),
     });    
   }
   enviarFormulario(): void {
-    if(this.texto=='' || this.numero==0) {
+    if(this.formulario.valid) {
       alert(this.formulario.valid);
       //console.log('Formulario enviado:', this.formulario.value);
     } else {
