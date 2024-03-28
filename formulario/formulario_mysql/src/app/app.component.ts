@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
       alert('Formulario enviado');
       //console.log('Formulario enviado:', this.formulario.value);
     } else {
-      alert(this.formulario.valid);
+      alert(this.formulario.getError);
       //console.log('Formulario no válido');
     }
   }
