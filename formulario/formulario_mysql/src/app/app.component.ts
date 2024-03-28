@@ -17,8 +17,8 @@ export class AppComponent implements OnInit{
   formulario!: FormGroup;
   ngOnInit(): void {
     this.formulario = new FormGroup({
-      texto: new FormControl([Validators.required]),
-      numero: new FormControl([Validators.required]),
+      texto: new FormControl(Validators.required),
+      numero: new FormControl(Validators.required),
     });    
   }
   enviarFormulario(): void {
