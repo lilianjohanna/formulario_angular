@@ -15,14 +15,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class AppComponent implements OnInit{
   formulario!: FormGroup;
-  constructor()
-  {
+  ngOnInit(): void {
     this.formulario = new FormGroup({
       texto: new FormControl('', [Validators.required]),
       numero: new FormControl('', [Validators.required]),
-    });
-  }
-  ngOnInit(): void {    
+    });    
   }
   enviarFormulario(): void {
     if (this.formulario.valid) {
