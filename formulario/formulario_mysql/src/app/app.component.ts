@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
     });    
   }
   enviarFormulario(): void {
-    if(this.texto!='' || this.numero==0) {
+    if(this.texto=='' || this.numero==0) {
       alert(this.formulario.valid);
       //console.log('Formulario enviado:', this.formulario.value);
     } else {
