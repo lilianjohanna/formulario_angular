@@ -14,10 +14,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit{
-  formulario!: FormGroup;
-  texto!: string;
-  numero!: number;
-  resultado!: string;
+  formulario: FormGroup;
+  texto: string;
+  numero: number;
+  resultado: string;
   ngOnInit(): void {
     this.formulario = new FormGroup({
       texto: new FormControl(null,Validators.required),
