@@ -22,11 +22,11 @@ export class AppComponent implements OnInit{
     });    
   }
   enviarFormulario(): void {
-    if(this.formulario.valid) {
-      alert(this.formulario.valid);
+    if(this.formulario.value) {
+      alert(this.formulario.value);
       //console.log('Formulario enviado:', this.formulario.value);
     } else {
-      alert(this.formulario.valid);
+      alert(this.formulario.value);
       //console.log('Formulario no válido');
     }
   }
