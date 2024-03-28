@@ -23,7 +23,7 @@ export class AppComponent implements OnInit{
   }
   enviarFormulario(): void {
     if(this.formulario.valid) {
-      alert('Formulario enviado');
+      alert(this.formulario.valid);
       //console.log('Formulario enviado:', this.formulario.value);
     } else {
       alert(this.formulario.valid);
