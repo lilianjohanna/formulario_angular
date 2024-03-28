@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
       numero: new FormControl(null,Validators.required),
     });    
   }
-  enviarFormulario(): void {
+  enviarFormulario(formulario: any): void {
     if(this.formulario.valid) {
       this.resultado="Correcto";
       //console.log('Formulario enviado:', this.formulario.value);
