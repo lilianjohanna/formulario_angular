@@ -3,7 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { TextoComponent } from './texto/texto.component';
 import { NumeroComponent } from './numero/numero.component';
 import { BotonComponent } from './boton/boton.component';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -24,6 +29,7 @@ export class AppComponent implements OnInit {
   texto!: string;
   numero!: number;
   resultado!: string;
+  constructor(private fb: FormBuilder) {}
   ngOnInit(): void {
     this.formulario = new FormGroup({
       texto: new FormControl('', [Validators.required]),
