@@ -9,27 +9,33 @@ import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,TextoComponent,NumeroComponent,BotonComponent,ReactiveFormsModule],
+  imports: [
+    RouterOutlet,
+    TextoComponent,
+    NumeroComponent,
+    BotonComponent,
+    ReactiveFormsModule,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   formulario!: FormGroup;
   texto!: string;
   numero!: number;
   resultado!: string;
   ngOnInit(): void {
     this.formulario = new FormGroup({
-      texto: new FormControl('',[Validators.required]),
-      numero: new FormControl('',[Validators.required]),
-    });    
+      texto: new FormControl('', [Validators.required]),
+      numero: new FormControl('', [Validators.required]),
+    });
   }
-  enviarFormulario(): void {
-    if(this.formulario.valid) {
-      this.resultado="Correcto";
+  enviarFormulario(formulario: FormGroup): void {
+    if (this.formulario.valid) {
+      this.resultado = 'Correcto';
       //console.log('Formulario enviado:', this.formulario.value);
     } else {
-      this.resultado="Error";
+      this.resultado = 'Error';
       //console.log('Formulario no válido');
     }
   }
