@@ -24,25 +24,25 @@ import { ReactiveFormsModule } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit {
-  formulario!: FormGroup;
+export class AppComponent {
+  formulario: FormGroup;
   texto!: string;
   numero!: number;
   resultado!: string;
-  constructor(private fb: FormBuilder) {}
-  ngOnInit(): void {
-    this.formulario = new FormGroup({
-      texto: new FormControl('', [Validators.required]),
-      numero: new FormControl('', [Validators.required]),
+  constructor(private formBuilder: FormBuilder) {
+    this.formulario = this.formBuilder.group({
+      texto: ['', Validators.required],
+      numero: ['', Validators.required],
     });
   }
-  enviarFormulario(formulario: FormGroup): void {
+  onSubmit() {
     if (this.formulario.valid) {
-      this.resultado = 'Correcto';
-      //console.log('Formulario enviado:', this.formulario.value);
+      // Si el formulario es válido, realiza alguna acción
+      this.resultado = 'Formulario válido. Enviando datos...';
     } else {
-      this.resultado = 'Error';
-      //console.log('Formulario no válido');
+      // Si el formulario no es válido, muestra un mensaje de error o realiza alguna acción
+      this.resultado =
+        'El formulario no es válido. Por favor, revisa los campos.';
     }
   }
   title = 'formulario_mysql';
