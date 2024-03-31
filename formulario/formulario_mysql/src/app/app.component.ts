@@ -31,8 +31,8 @@ export class AppComponent {
   resultado!: string;
   constructor(private formBuilder: FormBuilder) {
     this.formulario = this.formBuilder.group({
-      texto: [Validators.required, Validators.nullValidator],
-      numero: [Validators.required, Validators.nullValidator],
+      texto: ['', [Validators.required, Validators.nullValidator]],
+      numero: ['', [Validators.required, Validators.nullValidator]],
     });
   }
   onSubmit() {
