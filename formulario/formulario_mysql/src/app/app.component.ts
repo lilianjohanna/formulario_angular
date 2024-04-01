@@ -45,7 +45,7 @@ export class AppComponent {
       this.resultado = this.formulario.value;
     } else {
       // Si el formulario no es válido, muestra un mensaje de error o realiza alguna acción
-      this.resultado = 'Error...';
+      this.resultado = this.formulario.texto.value;
     }
   }
   title = 'formulario_mysql';
