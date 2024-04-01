@@ -26,16 +26,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class AppComponent {
   formulario!: FormGroup;
-  texto!: string;
-  numero!: number;
+  texto: any;
+  numero: any;
   resultado!: string;
   constructor(private formBuilder: FormBuilder) {
     this.crearFormulario();
   }
   crearFormulario() {
     this.formulario = this.formBuilder.group({
-      texto: ['', [Validators.required, Validators.nullValidator]],
-      numero: ['', [Validators.required, Validators.nullValidator]],
+      texto: [Validators.required, Validators.nullValidator],
+      numero: [Validators.required, Validators.nullValidator],
     });
     this.formulario.controls['texto'].valueChanges.subscribe((resultado) => {
       console.log(resultado);
