@@ -30,6 +30,9 @@ export class AppComponent {
   numero!: number;
   resultado!: string;
   constructor(private formBuilder: FormBuilder) {
+    this.crearFormulario();
+  }
+  crearFormulario() {
     this.formulario = this.formBuilder.group({
       texto: ['', [Validators.required, Validators.nullValidator]],
       numero: ['', [Validators.required, Validators.nullValidator]],
@@ -38,11 +41,11 @@ export class AppComponent {
   onSubmit() {
     if (this.formulario.valid) {
       // Si el formulario es válido, realiza alguna acción
-      this.resultado = 'Formulario válido. Enviando datos...';
+      //this.resultado = 'Formulario válido. Enviando datos...';
+      this.resultado = this.formulario.value;
     } else {
       // Si el formulario no es válido, muestra un mensaje de error o realiza alguna acción
-      this.resultado =
-        'El formulario no es válido. Por favor, revisa los campos.';
+      this.resultado = this.formulario.value;
     }
   }
   title = 'formulario_mysql';
