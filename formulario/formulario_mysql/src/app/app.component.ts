@@ -37,12 +37,6 @@ export class AppComponent {
       texto: [Validators.required, Validators.nullValidator],
       numero: [Validators.required, Validators.nullValidator],
     });
-    this.formulario.controls['texto'].valueChanges.subscribe((resultado) => {
-      console.log(resultado);
-    });
-    this.formulario.controls['numero'].valueChanges.subscribe((resultado) => {
-      console.log(resultado);
-    });
   }
   onSubmit() {
     if (this.formulario.valid) {
