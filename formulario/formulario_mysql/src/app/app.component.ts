@@ -25,7 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  formulario: FormGroup;
+  formulario!: FormGroup;
   texto!: string;
   numero!: number;
   resultado!: string;
@@ -45,7 +45,7 @@ export class AppComponent {
       this.resultado = this.formulario.value;
     } else {
       // Si el formulario no es válido, muestra un mensaje de error o realiza alguna acción
-      this.resultado = this.formulario.value;
+      this.resultado = 'Error...';
     }
   }
   title = 'formulario_mysql';
