@@ -11,6 +11,7 @@ import { DataService } from './app.service';
 })
 export class AppComponent {
   title = 'formulario_mysql';
+  formData: any;
   constructor(private dataService: DataService) {}
 
   onSubmit(formData: any) {
