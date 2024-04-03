@@ -334,9 +334,8 @@
 
 
 <router-outlet />
-<form (ngSubmit)="onSubmit(formData.value)">
-  <input type="text" name="campo1" ngModel>
-  <input type="text" name="campo2" ngModel>
-  <input type="text" name="campo3" ngModel>
-  <button type="submit">Enviar</button>
+<form [formGroup]="usuarioForm">
+  <input type="text" formControlName="nombre" placeholder="Nombre">
+  <input type="email" formControlName="correo" placeholder="Correo electrónico">
+  <button type="submit">Guardar</button>
 </form>

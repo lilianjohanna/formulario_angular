@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DataService } from './app.service';
+import { UsuarioService } from './app.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -13,17 +14,31 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'formulario_mysql';
-  formData: any;
-  constructor(private dataService: DataService) {}
+  usuarioForm: FormGroup;
 
-  onSubmit(formData: any) {
-    this.dataService.sendData(formData).subscribe(
-      (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.error(error);
-      },
-    );
+  constructor(
+    private fb: FormBuilder,
+    private usuarioService: UsuarioService,
+  ) {
+    this.usuarioForm = this.fb.group({
+      nombre: ['', Validators.required],
+      correo: ['', Validators.required],
+    });
+  }
+
+  onSubmit() {
+    const usuario = {
+      nombre: this.usuarioForm.value.nombre,
+      correo: this.usuarioForm.value.correo,
+    };
+
+    this.usuarioService.guardarUsuario(usuario).subscribe((respuesta) => {
+      if (respuesta.mensaje) {
+        alert(respuesta.mensaje);
+        this.usuarioForm.reset(); // Limpiar el formulario
+      } else {
+        alert(respuesta.error);
+      }
+    });
   }
 }

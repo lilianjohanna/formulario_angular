@@ -1,17 +1,13 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {
-  HttpClient,
-  HttpClientModule,
-  provideHttpClient,
-} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
-export class DataService {
+export class UsuarioService {
   constructor(private http: HttpClient) {}
 
-  sendData(data: any) {
-    return this.http.post('http://csw.myscriptcase.com/conexion.php', data);
+  guardarUsuario(usuario: any) {
+    return this.http.post('http://localhost/guardar_usuario.php', usuario);
   }
 }
