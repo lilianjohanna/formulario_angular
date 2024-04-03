@@ -334,3 +334,9 @@
 
 
 <router-outlet />
+<form (ngSubmit)="onSubmit(formData.value)">
+  <input type="text" name="campo1" ngModel>
+  <input type="text" name="campo2" ngModel>
+  <input type="text" name="campo3" ngModel>
+  <button type="submit">Enviar</button>
+</form>

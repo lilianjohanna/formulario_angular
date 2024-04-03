@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { DataService } from './app.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  providers: [HttpClientModule, HttpClient],
 })
 export class AppComponent {
   title = 'formulario_mysql';
+  formData: any;
   constructor(private dataService: DataService) {}
 
   onSubmit(formData: any) {
