@@ -12,9 +12,6 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   sendData(data: any) {
-    return this.http.post(
-      'http://localhost/conexionangular/conexion.php',
-      data,
-    );
+    return this.http.post('http://csw.myscriptcase.com/conexion.php', data);
   }
 }
