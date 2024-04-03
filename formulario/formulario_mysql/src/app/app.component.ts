@@ -9,6 +9,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
   imports: [RouterOutlet, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  providers: [HttpClientModule, HttpClient],
 })
 export class AppComponent {
   title = 'formulario_mysql';
