@@ -28,8 +28,9 @@ export class AppComponent {
 
   onSubmit() {
     const usuario = {
-      nombre: this.usuarioForm.value.nombre,
-      correo: this.usuarioForm.value.correo,
+      campo1: this.usuarioForm.value.campo1,
+      campo2: this.usuarioForm.value.campo2,
+      campo3: this.usuarioForm.value.campo3,
     };
 
     this.usuarioService.guardarUsuario(usuario).subscribe((respuesta) => {
