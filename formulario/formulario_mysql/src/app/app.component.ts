@@ -33,11 +33,11 @@ export class AppComponent {
     };
 
     this.usuarioService.guardarUsuario(usuario).subscribe((respuesta) => {
-      if (respuesta.mensaje) {
-        alert(respuesta.mensaje);
+      if (respuesta) {
+        alert('Bien');
         this.usuarioForm.reset(); // Limpiar el formulario
       } else {
-        alert(respuesta.error);
+        alert('Error');
       }
     });
   }
