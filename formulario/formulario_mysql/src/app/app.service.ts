@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class AppService {
+export class DataService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  sendData(data: any) {
+    return this.http.post(
+      'http://localhost/conexionangular/conexion.php',
+      data,
+    );
+  }
 }
