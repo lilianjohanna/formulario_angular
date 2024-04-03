@@ -8,6 +8,6 @@ export class UsuarioService {
   constructor(private http: HttpClient) {}
 
   guardarUsuario(usuario: any) {
-    return this.http.post('http://localhost/guardar_usuario.php', usuario);
+    return this.http.post('http://csw.myscriptcase.com/conexion.php', usuario);
   }
 }
